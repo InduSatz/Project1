@@ -18,6 +18,7 @@
 			<b>Product Desc:</b>${productObj.productdesc }<br>
 			<b>Price:</b>${productObj.price }<br>
 			<b>Quantity:</b>${productObj.quantity }<br>
+			<b>Category:</b>${productObj.category.categoryname }<br>
 			<button class="btn btn-lg"><span class="glyphicon glyphicon-shopping-cart" ></span></button>
 			</div>
 		</div>
