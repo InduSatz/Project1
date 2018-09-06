@@ -22,8 +22,7 @@
 <div class="container">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
-				<a href="" class="navbar-brand"><img src="<c:url value='resources/images/nature.jpeg'></c:url>"
-					alt="Butterfly Beauty Bliss" height="30px" width="70px"></a>
+				<a href="" class="navbar-brand"><img src="<c:url value='resources/images/nature.jpeg'></c:url>"alt="Butterfly Beauty Bliss" height="30px" width="70px"></a>
 			<button type="button" class="navbar-toggle collapsed" 
    data-toggle="collapse" data-target="#navbardemo" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -50,9 +49,9 @@
 				<li>
 				<a href="<c:url value='/all/searchByCategory?searchCondition=All'></c:url>">All</a>
 				</li>
-				
 				</ul>
 			   </li>
+
 			   <li><a href="<c:url value='/admin/getproductform'></c:url>">Add Product</a></li>
 			   <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
 				<li><a href="#">Sign Up</a></li>
