@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<b>Home Page</b>
+<b></b>
 <div class="container">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->

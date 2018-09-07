@@ -13,7 +13,7 @@
 <form:form modelAttribute="product" action="${url }"method="post" enctype="multipart/form-data">
 		<table>
 			<tr>
-				<td></td>
+				<td>
 				<!-- user need not give value for id, auto generation -->
 				<td><form:hidden path="id"></form:hidden></td>
 			</tr>

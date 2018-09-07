@@ -8,6 +8,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,6 +16,7 @@
 <!--  JQuery -->
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
 <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
 <title>Insert title here</title>
 </head>
@@ -54,8 +56,9 @@
 
 			   <li><a href="<c:url value='/admin/getproductform'></c:url>">Add Product</a></li>
 			   <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-				<li><a href="#">Sign Up</a></li>
-				<li><a href="#">Sign In</a></li>
+				<li><a href="<c:url value='/all/registrationform'></c:url>">Sign Up</a></li>
+				<li><a href="<c:url value='/login'></c:url>">Sign In</a></li>
+		
 				<li><a href="#">Sign out</a></li>
 			</ul>
 			</div>

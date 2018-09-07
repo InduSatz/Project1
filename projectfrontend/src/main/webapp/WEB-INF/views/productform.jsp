@@ -13,7 +13,7 @@
 	<!--  p=new Product(), initially all the properties will have default values
 	var url="/admin/addproduct" -->
 	<c:url value="/admin/addproduct" var="url"></c:url>
-	<form:form modelAttribute="product" action="${url}"method="post" enctype="multipart/form-data">
+	<form:form  modelAttribute="product" action="${url}" method="post" enctype="multipart/form-data">
 		<table>
 			<tr>
 				<td></td>

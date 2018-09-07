@@ -31,7 +31,6 @@ function fillShippingAddress(form){
 	
 }
 
-<script type="text/javascript">
 $(document).ready(function(){ 
 $('#form').validate({
 rules:{

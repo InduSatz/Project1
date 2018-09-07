@@ -78,6 +78,7 @@ public String addProduct(@Valid @ModelAttribute(name="product") Product product,
 		return "productform";
 	}
 	productDao.saveProduct(product);
+	
 	MultipartFile img=product.getImage();
 	System.out.println(request.getServletContext().getRealPath("/"));
 	//Defining a path
