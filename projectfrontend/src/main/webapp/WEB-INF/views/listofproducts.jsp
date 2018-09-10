@@ -37,17 +37,21 @@ $(document).ready(function(){
 			<!--  items refers to the collection of objects -->
 			<!-- var is local variable ,takes objects one by one from the collection -->
 			<c:forEach var="p" items="${productsList }" >
-				<tr>
-					<td><a href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.id }</a></td>
-					<td><img src="<c:url value='/resources/images/${p.id }.png'></c:url>" height="30px" width="30px"></td>
-					<td><a href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.productname }</a></td>
-					<td>${p.price }</td>
-					<td>${p.category.categoryname }</td>
-					<td>
-					<a href="<c:url value='/all/getproduct/${p.id }'></c:url>"><span class="glyphicon glyphicon-info-sign"></span></a>
-					<a href="<c:url value='/admin/deleteproduct/${p.id }'></c:url>"><span class="glyphicon glyphicon-trash"></span></a>
-					<a href="<c:url value='/admin/getupdateform/${p.id }'></c:url>"><span class="glyphicon glyphicon-pencil"></span></a>
-					</td>
+				<tr >
+						<td><a href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.id }</a></td>
+					   <td><img src="<c:url value='/resources/images/${p.id }.png'></c:url>" height="30px" width="30px"></td>
+						<td><a href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.productname }</a></td>
+						<td>${p.price }</td>
+						<td>${p.category.categoryname }</td>
+						<td>
+						
+						  <a href="<c:url value='/all/getproduct/${p.id }'></c:url>"><span class="glyphicon glyphicon-info-sign"></span></a> 
+								<security:authorize access="hasRole('ROLE_ADMIN')">
+								<a  href="<c:url value='/admin/deleteproduct/${p.id }'></c:url>"><span class="glyphicon glyphicon-trash"></span></a> 
+								<a href="<c:url value='/admin/getupdateform/${p.id }'></c:url>"><span class="glyphicon glyphicon-pencil"></span></a>
+								  </security:authorize>
+								
+						</td>
 
 				</tr>
 			</c:forEach>

@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -48,16 +49,16 @@ public String getProduct(@PathVariable int id,Model model){
 	return "viewproduct";
 }
 @RequestMapping(value="/admin/deleteproduct/{id}")
-public String deleteProduct(@PathVariable int id,Model model, HttpServletRequest request){
-	productDao.deleteProduct(id);		
+public String deleteProduct(@PathVariable int id,Model model,HttpServletRequest request){
+	productDao.deleteProduct(id);
 	Path path=Paths.get(request.getServletContext().getRealPath("/")+"/WEB-INF/resources/images/"+id+".png");
-	if(Files.exists(path)) {
+	if(Files.exists(path)){
 		try {
 			Files.delete(path);
-			} catch (IOException e) {
-				//TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	return "redirect:/all/getallproducts";
 }
@@ -77,25 +78,25 @@ public String addProduct(@Valid @ModelAttribute(name="product") Product product,
 		model.addAttribute("categories",productDao.getAllCategories());
 		return "productform";
 	}
+	
 	productDao.saveProduct(product);
 	
 	MultipartFile img=product.getImage();
 	System.out.println(request.getServletContext().getRealPath("/"));
 	//Defining a path
 	Path path=Paths.get(request.getServletContext().getRealPath("/")+"/WEB-INF/resources/images/"+product.getId()+".png");
-			//Transfer the image to the file
-			if(!img.isEmpty()&&img!=null) {
-				try {
-					img.transferTo(new File(path.toString()));
-					} catch (IllegalStateException e) {
-						//TODO Auto-generated catch block
-						e.printStackTrace();
-						} catch (IOException e) {
-							//TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-				
-			}
+	//transfer the image to the file
+	if(!img.isEmpty()&&img!=null){
+		try {
+			img.transferTo(new File(path.toString()));
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	return "redirect:/all/getallproducts";
 }
@@ -118,20 +119,18 @@ public String updateProduct(@Valid @ModelAttribute Product product,BindingResult
 	System.out.println(request.getServletContext().getRealPath("/"));
 	//Defining a path
 	Path path=Paths.get(request.getServletContext().getRealPath("/")+"/WEB-INF/resources/images/"+product.getId()+".png");
-			//Transfer the image to the file
-			if(!img.isEmpty() &&img!=null) {
-				try {
-					img.transferTo(new File(path.toString()));
-					} catch (IllegalStateException e) {
-						//TODO Auto-generated catch block
-						e.printStackTrace();
-						} catch (IOException e) {
-							//TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-				
-			}
-	
+	//transfer the image to the file
+	if(!img.isEmpty()&&img!=null){
+		try {
+			img.transferTo(new File(path.toString()));
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	return "redirect:/all/getallproducts";
 }
 @RequestMapping(value="/all/searchByCategory")
@@ -142,6 +141,7 @@ public String searchByCategory(@RequestParam String searchCondition ,Model model
 	model.addAttribute("searchCondition",searchCondition);
 	model.addAttribute("productsList",productDao.getAllProducts());
 	return "listofproducts";
+	
 	
 }
 }

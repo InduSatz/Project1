@@ -10,16 +10,15 @@
 <body>
 <div class="container">
 <c:url value="/admin/updateproduct" var="url"></c:url>
-<form:form modelAttribute="product" action="${url }"method="post" enctype="multipart/form-data">
+<form:form modelAttribute="product" action="${url }" method="post" enctype="multipart/form-data">
 		<table>
 			<tr>
-				<td>
+				<td></td>
 				<!-- user need not give value for id, auto generation -->
 				<td><form:hidden path="id"></form:hidden></td>
 			</tr>
 			<tr>
-				<td>Enter Product Name
-				</td>
+				<td>Enter Product Name</td>
 				<td><form:input path="productname"></form:input>
 				<form:errors path="productname" cssStyle="color:red"></form:errors>
 				</td>
@@ -54,6 +53,7 @@
 			<td></td>
 			<td><input type="submit" value="Edit Product"></td>
 			</tr>
+
 
 		</table>
 

@@ -18,8 +18,8 @@ public String getRegistrationFrom(Model model) {
 	model.addAttribute("customer",new Customer());
 	return "registrationform";
 }
-@RequestMapping(value="/all/registercustomer")
-		public String registerCustomer(@ModelAttribute(name="customer") Customer customer,Model model) {
+	@RequestMapping(value="/all/registercustomer")
+	public String registerCustomer(@ModelAttribute(name="customer") Customer customer,Model model){
 	
 	//CHECK if Email is unique
 	if(!customerDao.isEmailUnique(customer.getUser().getEmail())) {

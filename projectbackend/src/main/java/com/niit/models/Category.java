@@ -9,7 +9,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="categorydetails")
 public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

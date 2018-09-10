@@ -12,7 +12,11 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
 <!-- MVC -->
-<mvc:annotation-driven></mvc:annotation-driven>
+<mvc:annotation-driven>
+<mvc:argument-resolvers>
+<bean class="org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver"> </bean>
+</mvc:argument-resolvers>
+</mvc:annotation-driven>
 
 <!-- Context - ApplicationContext (spring container) -->
 <context:component-scan base-package="com.niit"></context:component-scan>

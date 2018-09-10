@@ -21,10 +21,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div class="container">
+	<div class="container">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
-				<a href="" class="navbar-brand"><img src="<c:url value='resources/images/nature.jpeg'></c:url>"alt="Butterfly Beauty Bliss" height="30px" width="70px"></a>
+				<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/niit.jpg'></c:url>" alt="NIIT" height="30px" width="70px"></a>
 			<button type="button" class="navbar-toggle collapsed" 
    data-toggle="collapse" data-target="#navbardemo" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -37,7 +37,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href='<c:url value='/home'></c:url>' class="fontSize">Home</a></li>
 				<li><a href="<c:url value='/aboutus'></c:url>" >About Us</a></li>
-				<li><a href="<c:url value='/all/getallproducts'></c:url>">Browse All Products</a>
+				<li><a href="<c:url value='/all/getallproducts'></c:url>">Browse all products</a>
 				<li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Select By Category<span class="caret"></span></a>
@@ -53,13 +53,24 @@
 				</li>
 				</ul>
 			   </li>
-
+			  
+			   <security:authorize access="hasRole('ROLE_ADMIN')">
 			   <li><a href="<c:url value='/admin/getproductform'></c:url>">Add Product</a></li>
-			   <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+			   </security:authorize>
+			   
+			   <security:authorize access="hasRole('ROLE_USER')">
+			   <li><a href="<c:url value='/cart/getcart'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+			   </security:authorize>
+			   
+			   <c:if test="${pageContext.request.userPrincipal.name==null }">
 				<li><a href="<c:url value='/all/registrationform'></c:url>">Sign Up</a></li>
 				<li><a href="<c:url value='/login'></c:url>">Sign In</a></li>
-		
-				<li><a href="#">Sign out</a></li>
+				</c:if>
+				
+				<c:if test="${pageContext.request.userPrincipal.name!=null }">
+				<li><a href="#">Welcome ${pageContext.request.userPrincipal.name }</a></li>
+				<li><a href="<c:url value='/j_spring_security_logout'></c:url>">Sign out</a></li>
+			    </c:if>
 			</ul>
 			</div>
 		</nav>

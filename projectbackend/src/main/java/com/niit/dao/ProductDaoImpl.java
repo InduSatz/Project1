@@ -17,6 +17,7 @@ import com.niit.models.Product;
 public class ProductDaoImpl implements ProductDao {
 @Autowired
 private SessionFactory sessionFactory;	
+
 public ProductDaoImpl(){
 	System.out.println("ProductDaoImpl bean is created");
 }
