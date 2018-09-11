@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.models.CartItem;
+import com.niit.models.CustomerOrder;
 import com.niit.models.User;
 @Repository
 @Transactional
@@ -38,7 +39,14 @@ private SessionFactory sessionFactory;
 		Session session=sessionFactory.getCurrentSession();
 		CartItem cartItem=(CartItem)session.get(CartItem.class, cartItemId);
 		session.delete(cartItem);
-		
+	}
+	public CustomerOrder createCustomerOrder(CustomerOrder customerOrder) {
+		Session session=sessionFactory.getCurrentSession();
+		session.save(customerOrder);
+		//customerOrder.user -> user obj
+		//user -> customer -> updated shipping address
+		return customerOrder;
+
 		
 }
 }

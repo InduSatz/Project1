@@ -3,6 +3,7 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
  <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,7 @@
 	<div class="container">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
-				<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/niit.jpg'></c:url>" alt="NIIT" height="30px" width="70px"></a>
+				<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/nature.jpeg'></c:url>" alt="Butterfly Bliss" height="30px" width="70px"></a>
 			<button type="button" class="navbar-toggle collapsed" 
    data-toggle="collapse" data-target="#navbardemo" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -59,7 +60,7 @@
 			   </security:authorize>
 			   
 			   <security:authorize access="hasRole('ROLE_USER')">
-			   <li><a href="<c:url value='/cart/getcart'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+			   <li><a href="<c:url value='/cart/getcart'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>(${cartSize} )</a></li>
 			   </security:authorize>
 			   
 			   <c:if test="${pageContext.request.userPrincipal.name==null }">

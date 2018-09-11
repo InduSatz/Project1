@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
 <%@ include file="header.jsp"%>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -47,6 +47,7 @@ Total Price : ${grandTotal }
 <span class="glyphicon glyphicon-shopping-cart"></span> Place Order  </a>
 </c:if>
 </div>
+
 
 </body>
 </html>
