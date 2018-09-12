@@ -22,8 +22,10 @@ public String getRegistrationFrom(Model model) {
 	@RequestMapping(value="/all/registercustomer")
 	public String registerCustomer(@ModelAttribute(name="customer") Customer customer,Model model)
 	{
+
 		System.out.println("Customer for registration: Name: "+ customer.getFirstname() + ", Email: " + customer.getUser().getEmail());
-	//CHECK if Email is unique
+	
+		//CHECK if Email is unique
 	if(!customerDao.isEmailUnique(customer.getUser().getEmail()))
 	{
 	model.addAttribute("error","Email id already exists..please choose different email id");	
