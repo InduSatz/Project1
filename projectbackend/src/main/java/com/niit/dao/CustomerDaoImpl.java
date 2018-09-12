@@ -16,7 +16,9 @@ import com.niit.models.User;
 public class CustomerDaoImpl implements CustomerDao {
 	@Autowired
 private SessionFactory sessionFactory;
-	public void registerCustomer(Customer customer) {
+	
+	public void registerCustomer(Customer customer)
+	{
 	   Session session=sessionFactory.getCurrentSession();
 	   
 	   //SET ENABLED property in USER as true
