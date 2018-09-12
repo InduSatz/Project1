@@ -22,12 +22,13 @@ public class ProductDaoImplTest extends TestCase {
 		   //Null or Not null
 		   assertNotNull(product1);
 		   assertNotNull(product3);
-		   assertNull(product2);
+		   assertNotNull(product2);
 		   
 		   //check for prices [actual price returned is same as expected price for id=3
 		   double expectedPrice=1000;
 		   double actualPrice=product1.getPrice();
 		   assertTrue(expectedPrice==actualPrice);
 	}
+	
 
 }

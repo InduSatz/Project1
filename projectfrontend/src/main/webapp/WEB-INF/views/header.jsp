@@ -25,7 +25,7 @@
 	<div class="container">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
-				<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/nature.jpeg'></c:url>" alt="Butterfly Bliss" height="30px" width="70px"></a>
+				<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/nature.jpeg'></c:url>" alt="Butterfly Beauty Bliss" height="30px" width="70px"></a>
 			<button type="button" class="navbar-toggle collapsed" 
    data-toggle="collapse" data-target="#navbardemo" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
