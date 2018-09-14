@@ -5,8 +5,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.models.Authorities;
 import com.niit.models.BillingAddress;
+import com.niit.models.CartItem;
 import com.niit.models.Category;
 import com.niit.models.Customer;
+import com.niit.models.CustomerOrder;
 import com.niit.models.Product;
 import com.niit.models.ShippingAddress;
 import com.niit.models.User;
@@ -60,7 +62,7 @@ public class DBConfiguration {
 			//An array of Class objects of all the entities
 			//Map all entities to relational table
 			//Class object of an Entity Product
-			Class classes[]=new Class[]{Product.class,Customer.class,Category.class,User.class,Authorities.class,BillingAddress.class,ShippingAddress.class}; //If product class is not yet created, remove this and add it later
+			Class classes[]=new Class[]{Product.class,Customer.class,Category.class,User.class,Authorities.class,BillingAddress.class,ShippingAddress.class,CustomerOrder.class,CartItem.class}; //If product class is not yet created, remove this and add it later
 			//localsesionfactorybuilder -> sessionfactory -> map all entities with relation table
 			System.out.println("SessionFactory bean " + lsf);
 		    return lsf.addAnnotatedClasses(classes).buildSessionFactory();

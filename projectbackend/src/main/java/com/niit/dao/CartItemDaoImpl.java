@@ -39,6 +39,8 @@ private SessionFactory sessionFactory;
 		Session session=sessionFactory.getCurrentSession();
 		CartItem cartItem=(CartItem)session.get(CartItem.class, cartItemId);
 		session.delete(cartItem);
+		
+		
 	}
 	public CustomerOrder createCustomerOrder(CustomerOrder customerOrder) {
 		Session session=sessionFactory.getCurrentSession();
@@ -46,7 +48,6 @@ private SessionFactory sessionFactory;
 		//customerOrder.user -> user obj
 		//user -> customer -> updated shipping address
 		return customerOrder;
+	}
 
-		
-}
 }

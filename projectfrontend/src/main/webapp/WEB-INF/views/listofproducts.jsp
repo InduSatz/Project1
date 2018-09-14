@@ -20,7 +20,7 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
-	    <b>List of Products</b>
+	    <b style="color:red; font-size: 11">List of Products</b>
 		<table class="table table-striped" border="1">
 			<thead>
 				<tr>

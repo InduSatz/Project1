@@ -23,7 +23,6 @@ public String getRegistrationFrom(Model model) {
 	public String registerCustomer(@ModelAttribute(name="customer") Customer customer,Model model)
 	{
 
-		System.out.println("Customer for registration: Name: "+ customer.getFirstname() + ", Email: " + customer.getUser().getEmail());
 	
 		//CHECK if Email is unique
 	if(!customerDao.isEmailUnique(customer.getUser().getEmail()))

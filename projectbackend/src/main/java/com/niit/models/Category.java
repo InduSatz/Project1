@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
 @Entity
 public class Category {
 	@Id
