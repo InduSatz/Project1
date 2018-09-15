@@ -31,7 +31,8 @@ public class DBConfiguration {
 
 	public DBConfiguration() {
 	System.out.println("DBConfiguration bean is created");
-		}
+
+}
 	
 	 @Bean(name="dataSource")
 	 public DataSource getDataSource() {
