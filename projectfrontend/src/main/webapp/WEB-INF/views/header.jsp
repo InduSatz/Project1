@@ -23,7 +23,7 @@
 </head>
 <body>
 	<div class="container">
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" id="nav_bar">
 			<div class="navbar-header">
 				<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/nature.jpeg'></c:url>" alt="Butterfly Beauty Bliss" height="30px" width="70px"></a>
 			<button type="button" class="navbar-toggle collapsed" 

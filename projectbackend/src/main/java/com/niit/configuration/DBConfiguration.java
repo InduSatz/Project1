@@ -38,7 +38,7 @@ public class DBConfiguration {
 			System.out.println("Entering DataSource Bean creation method ");
 		    BasicDataSource dataSource = new BasicDataSource();
 		    dataSource.setDriverClassName("org.h2.Driver");
-		    dataSource.setUrl("jdbc:h2:tcp://localhost/~/test1");
+		    dataSource.setUrl("jdbc:h2:tcp://localhost/~/test10");
 		    dataSource.setUsername("sa");
 		    dataSource.setPassword("");
 		    System.out.println("DataSource bean " +dataSource);
@@ -51,11 +51,9 @@ public class DBConfiguration {
 		@Bean //SessionFactory - factory of session objects
 		public SessionFactory sessionFactory() {
 			System.out.println("Entering sessionFactory creation method");
-			LocalSessionFactoryBuilder lsf=
-					new LocalSessionFactoryBuilder(getDataSource());
+			LocalSessionFactoryBuilder lsf=new LocalSessionFactoryBuilder(getDataSource());
 			Properties hibernateProperties=new Properties();
-			hibernateProperties.setProperty(
-					"hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+			hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 			hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
 			hibernateProperties.setProperty("hibernate.show_sql", "true");
 			lsf.addProperties(hibernateProperties);

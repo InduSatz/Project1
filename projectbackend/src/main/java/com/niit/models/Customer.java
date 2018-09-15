@@ -10,14 +10,15 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class Customer {
-@Id
-@GeneratedValue(strategy=GenerationType.AUTO)
-private int id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
 private String firstname;
 private String lastname;
 private String phonenumber;
+
 @OneToOne(cascade=CascadeType.ALL)
-private User user; //FK user_email
+private User user;//FK user_email
 @OneToOne(cascade=CascadeType.ALL)
 @JoinColumn(name="billing_id")
 private BillingAddress billingaddress;//billingaddress_id
@@ -67,3 +68,4 @@ public void setShippingaddress(ShippingAddress shippingaddress) {
 }
 
 }
+
