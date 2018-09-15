@@ -14,6 +14,7 @@
 <body>
 <div class="container">
 <b>About us Page</b><br>
+<p align="justify">
 Skinsense - Natural Luxury was born out of the belief that nature has the ability to satisfy all our needs - we just have to look a little harder!  Her journey into natural skincare and yoga sealed her belief in this, making it her mantra. 
 
 So, what do we do at Skinsense - Natural Luxury? We make natural soaps and skincare products by combining a few simple, yet potent, natural ingredients in a manner that draws their best into our skin. Its our way of drawing the essence of nature into our being.
