@@ -39,7 +39,7 @@ $(document).ready(function(){
 			<c:forEach var="p" items="${productsList }" >
 				<tr >
 						<td><a href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.id }</a></td>
-					   <td><img src="<c:url value='/resources/images/${p.id }.png'></c:url>" height="30px" width="30px"></td>
+					   <td><img src="<c:url value='/resources/images/${p.id }.jpg'></c:url>" height="60px" width="60px"></td>
 						<td><a href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.productname }</a></td>
 						<td>${p.price }</td>
 						<td>${p.category.categoryname }</td>
