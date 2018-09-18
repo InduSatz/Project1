@@ -14,7 +14,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerDao customerDao;
 	@RequestMapping(value="/all/registrationform")
-public String getRegistrationFrom(Model model) {
+public String getRegistrationForm(Model model) {
 	model.addAttribute("customer",new Customer());
 	return "registrationform";
 }

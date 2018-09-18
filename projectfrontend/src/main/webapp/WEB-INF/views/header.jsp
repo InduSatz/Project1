@@ -25,9 +25,9 @@
 	<div class="container">
 		<nav class="navbar navbar-default" id="nav_bar">
 			<div class="navbar-header">
-				<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/nature.jpeg'></c:url>" alt="Butterfly Beauty Bliss" height="30px" width="70px"></a>
-			<button type="button" class="navbar-toggle collapsed" 
-   data-toggle="collapse" data-target="#navbardemo" aria-expanded="false">
+			<a href="" class="navbar-brand"><img src="resources/images/22.png" alt="BEAUTY BUTTERFLY BLISS" height="30px" width="60px"></a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbardemo" aria-expanded="false">
+   
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -36,12 +36,12 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbardemo">
 			<ul class="nav navbar-nav">
-				<li><a href='<c:url value='/home'></c:url>' class="fontSize">Home</a></li>
-				<li><a href="<c:url value='/aboutus'></c:url>" >About Us</a></li>
-				<li><a href="<c:url value='/all/getallproducts'></c:url>">Browse all products</a>
+				<li><a href='<c:url value='/home'></c:url>' class="fontSize">HOME</a></li>
+				<li><a href="<c:url value='/aboutus'></c:url>" >ABOUT US</a></li>
+				<li><a href="<c:url value='/all/getallproducts'></c:url>">BROWSE ALL PRODUCTS</a>
 				<li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Select By Category<span class="caret"></span></a>
+					data-toggle="dropdown">SELECT BY CATEGORY<span class="caret"></span></a>
 					
 				<ul class="dropdown-menu">
 				<c:forEach items="${categories }" var="category">
@@ -64,8 +64,8 @@
 			   </security:authorize>
 			   
 			   <c:if test="${pageContext.request.userPrincipal.name==null }">
-				<li><a href="<c:url value='/all/registrationform'></c:url>">Sign Up</a></li>
-				<li><a href="<c:url value='/login'></c:url>">Sign In</a></li>
+				<li><a href="<c:url value='/all/registrationform'></c:url>">SIGN UP</a></li>
+				<li><a href="<c:url value='/login'></c:url>">SIGN IN</a></li>
 				</c:if>
 				
 				<c:if test="${pageContext.request.userPrincipal.name!=null }">
